@@ -23,7 +23,12 @@ import {
   Users,
   Building2,
   Star,
-  Quote
+  Quote,
+  ChevronDown,
+  TrendingDown,
+  Target,
+  Award,
+  Eye
 } from 'lucide-react';
 
 const DOWNLOAD_URL = '/KMZ_Generator_v5.3.exe';
@@ -42,14 +47,23 @@ function App() {
       {/* SOCIAL PROOF BAR */}
       <SocialProofBar />
 
+      {/* STATS / KEY METRICS SECTION */}
+      <StatsSection />
+
       {/* PROBLEM SECTION */}
       <ProblemSection />
 
-      {/* HOW IT WORKS */}
+      {/* HOW IT WORKS (4 STEPS) */}
       <HowItWorksSection />
+
+      {/* INTEGRATIONS SECTION */}
+      <IntegrationsSection />
 
       {/* FEATURES */}
       <FeaturesSection />
+
+      {/* PERSONAS SECTION */}
+      <PersonasSection />
 
       {/* SECURITY SECTION */}
       <SecuritySection />
@@ -62,6 +76,9 @@ function App() {
 
       {/* CNC / AI SECTION */}
       <CNCSection />
+
+      {/* FAQ SECTION */}
+      <FAQSection />
 
       {/* CTA SECTION */}
       <CTASection />
@@ -259,6 +276,93 @@ function SocialProofBar() {
   );
 }
 
+/* ===== STATS / KEY METRICS SECTION ===== */
+function StatsSection() {
+  return (
+    <section className="py-20 lg:py-28 bg-gradient-to-br from-navy-900 via-navy-950 to-navy-900 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent-orange/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-accent-blue/5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+            От <span className="text-red-400">2 часов</span> до{' '}
+            <span className="text-green-400">30 секунд</span>
+          </h2>
+          <p className="mt-4 text-lg text-navy-300">
+            Реальная экономия времени, подтверждённая на сотнях деталей
+          </p>
+        </div>
+
+        {/* Visual comparison */}
+        <div className="grid md:grid-cols-3 gap-8 items-center max-w-5xl mx-auto">
+          {/* Before */}
+          <div className="text-center p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-500/10 mb-4">
+              <Clock className="w-8 h-8 text-red-400" />
+            </div>
+            <p className="text-4xl font-extrabold text-red-400 mb-2">2 часа</p>
+            <p className="text-sm text-navy-300">Ручной расчёт в AutoCAD</p>
+            <div className="mt-4 flex items-center justify-center gap-1">
+              <div className="w-2 h-2 rounded-full bg-red-400/30"></div>
+              <div className="w-2 h-2 rounded-full bg-red-400/50"></div>
+              <div className="w-2 h-2 rounded-full bg-red-400/70"></div>
+              <div className="w-2 h-2 rounded-full bg-red-400"></div>
+            </div>
+          </div>
+
+          {/* Arrow / Transformation */}
+          <div className="flex flex-col items-center justify-center">
+            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-accent-orange to-amber-500 flex items-center justify-center shadow-2xl shadow-orange-500/30">
+              <TrendingDown className="w-10 h-10 text-white" />
+            </div>
+            <p className="mt-4 text-2xl font-bold text-white">240×</p>
+            <p className="text-sm text-navy-300">Ускорение</p>
+          </div>
+
+          {/* After */}
+          <div className="text-center p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-500/10 mb-4">
+              <Zap className="w-8 h-8 text-green-400" />
+            </div>
+            <p className="text-4xl font-extrabold text-green-400 mb-2">30 сек</p>
+            <p className="text-sm text-navy-300">Автоматический расчёт в КЭП</p>
+            <div className="mt-4 flex items-center justify-center gap-1">
+              <div className="w-2 h-2 rounded-full bg-green-400"></div>
+              <div className="w-2 h-2 rounded-full bg-green-400/70"></div>
+              <div className="w-2 h-2 rounded-full bg-green-400/50"></div>
+              <div className="w-2 h-2 rounded-full bg-green-400/30"></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional stats */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="text-center">
+            <p className="text-3xl font-extrabold text-white">0</p>
+            <p className="text-xs text-navy-400 mt-1">Ошибок в расчётах</p>
+          </div>
+          <div className="text-center">
+            <p className="text-3xl font-extrabold text-white">100%</p>
+            <p className="text-xs text-navy-400 mt-1">Соответствие ГОСТ</p>
+          </div>
+          <div className="text-center">
+            <p className="text-3xl font-extrabold text-white">6</p>
+            <p className="text-xs text-navy-400 mt-1">Форм поковок</p>
+          </div>
+          <div className="text-center">
+            <p className="text-3xl font-extrabold text-white">∞</p>
+            <p className="text-xs text-navy-400 mt-1">Количество карт</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ===== PROBLEM SECTION ===== */
 function ProblemSection() {
   const problems = [
@@ -316,7 +420,7 @@ function ProblemSection() {
   );
 }
 
-/* ===== HOW IT WORKS ===== */
+/* ===== HOW IT WORKS (4 STEPS) ===== */
 function HowItWorksSection() {
   const steps = [
     {
@@ -335,7 +439,13 @@ function HowItWorksSection() {
       number: '03',
       icon: <FileText className="w-7 h-7" />,
       title: 'Получите карту по ГОСТ',
-      description: 'Готовый PDF с эскизом, спецификацией и расчетами за 30 секунд',
+      description: 'Автоматическая генерация чертежа и спецификации за 30 секунд',
+    },
+    {
+      number: '04',
+      icon: <Check className="w-7 h-7" />,
+      title: 'Проверьте и утвердите',
+      description: 'Программа не принимает решения за вас — финальная проверка и утверждение остаются за технологом',
     }
   ];
 
@@ -345,29 +455,98 @@ function HowItWorksSection() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 tracking-tight">
             От чертежа до готового PDF за{' '}
-            <span className="text-accent-orange">3 шага</span>
+            <span className="text-accent-orange">4 шага</span>
           </h2>
           <p className="mt-4 text-lg text-navy-500">
-            Простой и понятный процесс, который экономит часы работы
+            Простой и понятный процесс, который экономит часы работы и сохраняет контроль за технологом
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
             <div key={index} className="relative text-center">
+              {/* Connector line */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-12 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-navy-200 to-navy-100"></div>
+                <div className="hidden lg:block absolute top-12 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-navy-200 to-navy-100"></div>
               )}
+
               <div className="relative inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-white shadow-lg border border-gray-100 mb-6">
                 <span className="absolute -top-2 -right-2 w-8 h-8 bg-accent-orange text-white text-xs font-bold rounded-full flex items-center justify-center shadow-md">
                   {step.number}
                 </span>
                 <div className="text-navy-700">{step.icon}</div>
               </div>
+
               <h3 className="text-xl font-bold text-navy-900 mb-3">{step.title}</h3>
               <p className="text-navy-500 leading-relaxed max-w-xs mx-auto">{step.description}</p>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ===== INTEGRATIONS SECTION ===== */
+function IntegrationsSection() {
+  const integrations = [
+    { name: 'КОМПАС-3D', color: 'from-blue-600 to-blue-500', status: 'В разработке' },
+    { name: 'SolidWorks', color: 'from-red-600 to-red-500', status: 'В разработке' },
+    { name: 'Autodesk Inventor', color: 'from-blue-700 to-cyan-500', status: 'Планируется' },
+    { name: 'AutoCAD', color: 'from-red-700 to-red-600', status: 'Планируется' },
+    { name: 'NX CAD', color: 'from-orange-600 to-orange-500', status: 'Планируется' },
+    { name: 'Creo', color: 'from-yellow-600 to-orange-500', status: 'Планируется' }
+  ];
+
+  return (
+    <section className="py-20 lg:py-28 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-accent-blue/10 rounded-full mb-4">
+            <Cpu className="w-3.5 h-3.5 text-accent-blue" />
+            <span className="text-xs font-semibold text-accent-blue uppercase tracking-wide">Интеграции</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 tracking-tight">
+            Бесшовная интеграция{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-blue-600">
+              с вашей САПР
+            </span>
+          </h2>
+          <p className="mt-4 text-lg text-navy-500">
+            КЭП работает в экосистеме ваших инструментов. Не нужно переучиваться — программа дополняет то, что вы уже используете.
+          </p>
+        </div>
+
+        {/* Integration logos grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
+          {integrations.map((integration, index) => (
+            <div
+              key={index}
+              className="group relative p-6 rounded-xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:border-gray-200 hover:shadow-lg transition-all duration-300 text-center"
+            >
+              <div className={`w-16 h-16 mx-auto rounded-xl bg-gradient-to-br ${integration.color} flex items-center justify-center mb-3 shadow-md group-hover:scale-110 transition-transform duration-300`}>
+                <span className="text-white font-bold text-xs">{integration.name.split(' ')[0].substring(0, 3)}</span>
+              </div>
+              <p className="text-sm font-semibold text-navy-900 mb-1">{integration.name}</p>
+              <p className="text-xs text-navy-400">{integration.status}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Note about current functionality */}
+        <div className="max-w-3xl mx-auto p-6 rounded-xl bg-navy-50/50 border border-navy-100">
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent-blue/10 flex items-center justify-center">
+              <Eye className="w-5 h-5 text-accent-blue" />
+            </div>
+            <div>
+              <h3 className="font-semibold text-navy-900 mb-2">Вектор развития</h3>
+              <p className="text-sm text-navy-600 leading-relaxed">
+                Интеграции с популярными САПР находятся в активной разработке. Уже сейчас вы можете экспортировать карты эскизов в форматах PDF и DXF, которые импортируются в любую CAD-систему. 
+                <a href="#contacts" className="text-accent-blue hover:underline font-medium ml-1">Свяжитесь с нами</a>, чтобы узнать о статусе интеграций.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -429,6 +608,83 @@ function FeaturesSection() {
               </div>
               <h3 className="text-xl font-bold text-navy-900 mb-3">{feature.title}</h3>
               <p className="text-navy-500 leading-relaxed">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ===== PERSONAS SECTION ===== */
+function PersonasSection() {
+  const personas = [
+    {
+      icon: <Target className="w-8 h-8" />,
+      role: 'Для технолога',
+      title: 'Скорость и точность',
+      benefits: [
+        'Генерация карты за 30 секунд вместо 2 часов',
+        'Автоматический расчёт по ГОСТ 8479-70 и 7062-90',
+        'Модуль КРС — уникальный расчёт подката',
+        'Экспорт в PDF и DXF для любой САПР',
+        'Работает без интернета — безопасно для режимных объектов'
+      ],
+      color: 'from-accent-blue to-blue-600',
+      bgColor: 'from-blue-50 to-white'
+    },
+    {
+      icon: <Award className="w-8 h-8" />,
+      role: 'Для главного инженера',
+      title: 'Контроль и снижение рисков',
+      benefits: [
+        'Снижение риска брака на 95% — расчёты без ошибок',
+        'Не требует обучения — интерфейс понятен за 10 минут',
+        'Соответствие ГОСТ — проходит любую проверку ОТК',
+        'Масштабируется на весь цех или завод',
+        'Пентест пройден — безопасность данных гарантирована'
+      ],
+      color: 'from-accent-orange to-amber-500',
+      bgColor: 'from-orange-50 to-white'
+    }
+  ];
+
+  return (
+    <section className="py-20 lg:py-28 bg-navy-50/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 tracking-tight">
+            Решения для{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-navy-700 to-accent-blue">
+              каждой роли
+            </span>
+          </h2>
+          <p className="mt-4 text-lg text-navy-500">
+            КЭП создан с учётом потребностей всех участников процесса — от технолога до руководителя
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {personas.map((persona, index) => (
+            <div
+              key={index}
+              className={`relative p-8 lg:p-10 rounded-2xl bg-gradient-to-br ${persona.bgColor} border border-gray-100 hover:shadow-xl transition-all duration-300`}
+            >
+              <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${persona.color} text-white mb-6 shadow-lg`}>
+                {persona.icon}
+              </div>
+
+              <p className="text-sm font-semibold text-navy-500 uppercase tracking-wide mb-2">{persona.role}</p>
+              <h3 className="text-2xl font-bold text-navy-900 mb-6">{persona.title}</h3>
+
+              <ul className="space-y-3">
+                {persona.benefits.map((benefit, bIndex) => (
+                  <li key={bIndex} className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-navy-600">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
@@ -737,26 +993,6 @@ function TestimonialsSection() {
             </div>
           ))}
         </div>
-
-        {/* Stats bar */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 p-8 rounded-2xl bg-navy-50/50 border border-gray-100">
-          <div className="text-center">
-            <p className="text-3xl font-extrabold text-navy-900">240×</p>
-            <p className="text-sm text-navy-500 mt-1">Ускорение работы</p>
-          </div>
-          <div className="text-center">
-            <p className="text-3xl font-extrabold text-navy-900">500+</p>
-            <p className="text-sm text-navy-500 mt-1">Карт сгенерировано</p>
-          </div>
-          <div className="text-center">
-            <p className="text-3xl font-extrabold text-navy-900">0</p>
-            <p className="text-sm text-navy-500 mt-1">Ошибок в расчётах</p>
-          </div>
-          <div className="text-center">
-            <p className="text-3xl font-extrabold text-navy-900">6</p>
-            <p className="text-sm text-navy-500 mt-1">Форм поковок</p>
-          </div>
-        </div>
       </div>
     </section>
   );
@@ -821,6 +1057,97 @@ function CNCSection() {
             <div className="absolute -top-6 -right-6 w-32 h-32 bg-accent-blue/10 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-blue-500/10 rounded-full blur-2xl"></div>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ===== FAQ SECTION ===== */
+function FAQSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      question: 'Можно ли использовать одну лицензию на нескольких людей?',
+      answer: 'Да, тарифы "Цех" и "Завод" поддерживают несколько рабочих мест. Тариф "Старт" рассчитан на одного пользователя. Вы можете масштабировать лицензию по мере роста команды.'
+    },
+    {
+      question: 'Работает ли программа с моей версией САПР?',
+      answer: 'КЭП работает автономно и не требует конкретной версии САПР. Вы можете экспортировать карты в PDF или DXF, которые импортируются в любую CAD-систему: КОМПАС-3D, SolidWorks, AutoCAD, Inventor и другие.'
+    },
+    {
+      question: 'Что будет после окончания 30-дневного триала?',
+      answer: 'После триала вы можете выбрать подходящий тариф или продлить триал, связавшись с нами. Все ваши данные и настройки сохраняются. Мы не удаляем программы и файлы после окончания пробного периода.'
+    },
+    {
+      question: 'Как программа работает без интернета?',
+      answer: 'КЭП полностью работает локально на вашем компьютере. Не требуется подключение к интернету для расчётов, генерации карт или экспорта. Это критично для режимных предприятий с закрытым контуром безопасности.'
+    },
+    {
+      question: 'Соответствует ли программа актуальным ГОСТам?',
+      answer: 'Да, расчёты выполняются строго по ГОСТ 8479-70 "Поковки из углеродистой стали" и ГОСТ 7062-90 "Поковки из цветных металлов". Мы регулярно обновляем программу при изменении стандартов.'
+    },
+    {
+      question: 'Как часто выходят обновления?',
+      answer: 'Мы выпускаем обновления каждые 2-3 месяца. Все обновления включены в стоимость подписки. Вы получаете новые функции, исправления ошибок и обновления стандартов автоматически.'
+    }
+  ];
+
+  return (
+    <section className="py-20 lg:py-28 bg-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 tracking-tight">
+            Часто задаваемые{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-navy-700 to-accent-blue">
+              вопросы
+            </span>
+          </h2>
+          <p className="mt-4 text-lg text-navy-500">
+            Ответы на самые популярные вопросы о программе КЭП
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="border border-gray-200 rounded-xl overflow-hidden hover:border-gray-300 transition-colors"
+            >
+              <button
+                className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              >
+                <span className="font-semibold text-navy-900">{faq.question}</span>
+                <ChevronDown
+                  className={`w-5 h-5 text-navy-400 flex-shrink-0 transition-transform duration-200 ${
+                    openIndex === index ? 'rotate-180' : ''
+                  }`}
+                />
+              </button>
+              
+              {openIndex === index && (
+                <div className="px-6 pb-5 pt-0">
+                  <p className="text-navy-600 leading-relaxed">{faq.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Additional CTA */}
+        <div className="mt-12 text-center p-8 rounded-2xl bg-navy-50/50 border border-gray-100">
+          <p className="text-navy-700 mb-4">
+            Не нашли ответ на свой вопрос?
+          </p>
+          <a
+            href="#contacts"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-navy-900 hover:bg-navy-800 text-white font-semibold text-sm rounded-lg transition-colors"
+          >
+            <Mail className="w-4 h-4" />
+            Связаться с нами
+          </a>
         </div>
       </div>
     </section>
