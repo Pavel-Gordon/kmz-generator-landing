@@ -165,7 +165,7 @@ function Navbar({
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
             <div className="w-10 h-10 bg-navy-900 dark:bg-slate-700 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">К</span>
+              <img src="/logo_kep.png" className="h-8 w-auto" alt="КЭП" />
             </div>
             <span className="text-2xl font-bold text-navy-900 dark:text-white tracking-tight">КЭП</span>
           </a>
@@ -295,8 +295,8 @@ function HeroSection() {
           <div className="relative">
             <div className="hero-image relative rounded-2xl shadow-2xl shadow-navy-900/20 overflow-hidden border border-gray-200 dark:border-slate-700 bg-navy-950">
               <img
-                src="https://image.qwenlm.ai/generated-images/dc4b7689-b21d-46b5-84ce-183e38934e65/_result.png"
-                alt="Интерфейс программы КЭП — генератор карт эскизов поковок"
+                src="/hero_card.png"
+                alt="Карта эскиза поковки — демо образец"
                 className="w-full h-auto"
               />
             </div>
@@ -1277,7 +1277,7 @@ function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">К</span>
+                <img src="/logo_kep.png" className="h-8 w-auto" alt="КЭП" />
               </div>
               <span className="text-white font-semibold text-lg">КЭП</span>
             </div>
