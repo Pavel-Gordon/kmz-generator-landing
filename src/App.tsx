@@ -323,27 +323,16 @@ function SocialProofBar() {
           <div className="flex items-center gap-2 px-5 py-3 bg-white dark:bg-slate-800/60 rounded-lg shadow-sm border border-gray-100 dark:border-slate-700">
             <Building2 className="w-5 h-5 text-navy-700 dark:text-slate-200" />
             <span className="font-bold text-navy-800 dark:text-slate-100">УМЗ</span>
-            <span className="text-xs text-navy-400 dark:text-slate-400">Уральский машиностроительный</span>
+            <span className="text-xs text-navy-400 dark:text-slate-400">Уральский машиностроительный завод</span>
           </div>
           <div className="flex items-center gap-2 px-5 py-3 bg-white dark:bg-slate-800/60 rounded-lg shadow-sm border border-gray-100 dark:border-slate-700">
             <Building2 className="w-5 h-5 text-navy-700 dark:text-slate-200" />
-            <span className="font-bold text-navy-800 dark:text-slate-100">КМЗ</span>
-            <span className="text-xs text-navy-400 dark:text-slate-400">Кольцовский машиностроительный</span>
-          </div>
-          <div className="flex items-center gap-2 px-5 py-3 bg-white dark:bg-slate-800/60 rounded-lg shadow-sm border border-gray-100 dark:border-slate-700">
-            <Building2 className="w-5 h-5 text-navy-700 dark:text-slate-200" />
-            <span className="font-bold text-navy-800 dark:text-slate-100">ОМК</span>
-            <span className="text-xs text-navy-400 dark:text-slate-400">Объединённая металлургическая компания</span>
-          </div>
-          <div className="flex items-center gap-2 px-5 py-3 bg-white dark:bg-slate-800/60 rounded-lg shadow-sm border border-gray-100 dark:border-slate-700">
-            <Building2 className="w-5 h-5 text-navy-700 dark:text-slate-200" />
-            <span className="font-bold text-navy-800 dark:text-slate-100">ВМЗ</span>
-            <span className="text-xs text-navy-400 dark:text-slate-400">Выксунский металлургический</span>
+            <span className="font-bold text-navy-800 dark:text-slate-100">КМЗ Ижора-Металл</span>
           </div>
         </div>
         <div className="text-center mt-6">
           <p className="text-sm text-navy-400 dark:text-slate-400">
-            Более <strong className="text-navy-700 dark:text-slate-200">500+ карт эскизов</strong> сгенерировано и проверено технологами
+            Протестировано на реальных чертежах заводов УМЗ и КМЗ Ижора-Металл
           </p>
         </div>
       </div>
