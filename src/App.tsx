@@ -537,6 +537,14 @@ function HowItWorksSection() {
           </p>
         </div>
 
+        <div className="mb-16">
+          <img
+            src="/ui_main.png"
+            alt="Интерфейс программы генерации карты эскиза"
+            className="w-full rounded-2xl shadow-lg"
+          />
+        </div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
             <div key={index} className="relative text-center">
@@ -670,6 +678,14 @@ function FeaturesSection() {
           <p className="mt-4 text-lg text-navy-500 dark:text-slate-300">
             Каждая функция разработана с учетом реальных потребностей инженеров машиностроительных предприятий
           </p>
+        </div>
+
+        <div className="mb-16">
+          <img
+            src="/ui_result.png"
+            alt="Результат генерации карты эскиза"
+            className="w-full rounded-2xl shadow-lg"
+          />
         </div>
 
         <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
