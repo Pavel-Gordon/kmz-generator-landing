@@ -1,12 +1,16 @@
 @import "tailwindcss";
 
+/* Tailwind v4 CSS-first config: use the `.dark` class instead of prefers-color-scheme.
+   (Equivalent of `darkMode: 'class'` in tailwind.config.js.) */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-navy-50: #f0f4f8;
   --color-navy-100: #d9e2ec;
   --color-navy-200: #bcccdc;
   --color-navy-300: #9fb3c8;
-  --color-navy-400: #829ab1;
-  --color-navy-500: #627d98;
+  --color-navy-400: #58728c;
+  --color-navy-500: #526b84;
   --color-navy-600: #486581;
   --color-navy-700: #334e68;
   --color-navy-800: #243b53;
@@ -20,10 +24,21 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+  background-color: #0b1120;
 }
 
 body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+}
+
+html.dark body {
+  background-color: #0b1120;
 }

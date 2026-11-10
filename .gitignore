@@ -3,3 +3,9 @@ node_modules/
 dist/
 build/
 *.log
+
+# Дистрибутивы и снапшоты (Задача №20 — подготовка к чистке)
+*.zip
+*.exe
+dist_*/
+workspace.tar

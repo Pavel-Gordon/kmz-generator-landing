@@ -1,9 +1,25 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0B1120" />
     <title>КЭП — Генератор карт эскизов поковок и подката КРС</title>
+    <script>
+      // Apply the saved theme before first paint. Dark is the default.
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          var isLight = saved === 'light';
+          document.documentElement.classList.toggle('dark', !isLight);
+          document.documentElement.style.colorScheme = isLight ? 'light' : 'dark';
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', isLight ? '#ffffff' : '#0B1120');
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -14,6 +30,12 @@
         width: 100%;
         min-height: 100vh;
         font-family: 'Inter', sans-serif;
+      }
+      html {
+        background-color: #ffffff;
+      }
+      html.dark {
+        background-color: #0B1120;
       }
     </style>
   </head>
