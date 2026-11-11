@@ -38,7 +38,9 @@ const DOWNLOAD_URL = '/KMZ_Generator_v5.3.exe';
 type Theme = 'light' | 'dark';
 
 function getInitialTheme(): Theme {
-  return document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+  // Защита от среды без DOM (SSR, prerender): документ может быть недоступен.
+  if (typeof document === "undefined") return "light";
+  return document.documentElement.classList.contains("dark") ? "dark" : "light";
 }
 
 function App() {
